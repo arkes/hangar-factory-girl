@@ -1,11 +1,9 @@
 # Hangar Factory Girl
 
-Library to use Hangar with protractor
+Library to use Hangar with Protractor
 
 This is only usefull with [Hangar](https://github.com/faradayio/hangar).
-
-http://faraday.io/2014/09/24/hangar-using-factorygirl-factories-from-your-frontend-tests
-
+More info about hangar: http://faraday.io/2014/09/24/hangar-using-factorygirl-factories-from-your-frontend-tests
 
 ## Installation
 
@@ -13,12 +11,17 @@ http://faraday.io/2014/09/24/hangar-using-factorygirl-factories-from-your-fronte
 npm install hangar-factory-girl
 ```
 
+### dependencies:
+
+[http-sync](https://github.com/dhruvbird/http-sync)
+[pluralize](https://github.com/blakeembrey/pluralize)
+
 ## Usage
 
 ```javascript
 var factoryGirl = require('hangar-factory-girl');
 
-describe('Login page', function() {
+describe('My Page', function() {
 
   afterEach(function() {
     factoryGirl().clear();

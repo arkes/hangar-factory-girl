@@ -54,7 +54,7 @@ hangarFactoryGirl.prototype = {
         'Content-type': 'application/json',
         'Accept':       'application/json'
       },
-      method: this._method,
+      method:   this._method,
       protocol: this._protocol,
       host:     this._hostname,
       port:     this._port,
@@ -72,10 +72,9 @@ hangarFactoryGirl.prototype = {
     if (!timedout && response.body) {
       if (response.statusCode == 200) {
         return JSON.parse(response.body);  
-      } else if (response.statusCode) {
-        console.log('hangarFactory: (' + response.statusCode + ') ' + response.body);
-        return undefined;
       }
+      console.log('hangarFactory: (' + response.statusCode + ') ' + response.body);
+      return undefined;
     }
   }
 };
