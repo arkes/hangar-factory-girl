@@ -1,0 +1,17 @@
+{
+  "name": "hangar-factory-girl",
+  "version": "0.1.0",
+  "description": "Library to use Hangar with protractor",
+  "main": "hangar-factory-girl.js",
+  "repository": "https://github.com/arkes/hangar-factory-girl",
+  "dependencies": {
+    "http-sync": ">= 0.0.5",
+    "pluralize": ">= 1.1.0"
+  },
+  "author": {
+    "name": "Tom Floc'h",
+    "email": "thomas.floch@gmail.com"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
