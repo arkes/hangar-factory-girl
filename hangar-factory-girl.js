@@ -5,7 +5,7 @@ var pluralize = require('pluralize');
 function hangarFactoryGirl(options) {
   this._options = options || {};
 
-  this._timer = this._options['timer'] || 42;
+  this._timer = this._options['timer'] || 500;
 
   var result = url.parse(this._options['url'] || browser.baseUrl);
   this._baseUrl  = result.href;
@@ -79,6 +79,4 @@ hangarFactoryGirl.prototype = {
   }
 };
 
-module.exports = function() {
-  return new hangarFactoryGirl;
-};
+module.exports = hangarFactoryGirl;

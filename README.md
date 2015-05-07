@@ -19,17 +19,20 @@ npm install hangar-factory-girl
 ## Usage
 
 ```javascript
-var factoryGirl = require('hangar-factory-girl');
+var hangar = require('hangar-factory-girl');
+var factory = new hangar();
 
 describe('My Page', function() {
 
   afterEach(function() {
-    factoryGirl().clear();
+    factory.clear();
   });
 
   it("does something", function() {
-    var user = factoryGirl().create('user');
-    var comment = factoryGirl().build('comment', { user_id: user.id });
+    var user = factory.create('user');
+    var comment = factory.build('comment', { user_id: user.id });
+
+    browser.get('/accounts/' + user.id);
   });
 
 });
