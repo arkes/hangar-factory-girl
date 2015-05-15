@@ -5,7 +5,7 @@ var pluralize = require('pluralize');
 function hangarFactoryGirl(options) {
   this._options = options || {};
 
-  this._timer = this._options['timer'] || 500;
+  this._wait_time = this._options['wait_time'] || 1000;
 
   var result = url.parse(this._options['url'] || browser.baseUrl);
   this._baseUrl  = result.href;
@@ -63,7 +63,7 @@ hangarFactoryGirl.prototype = {
     });
 
     var timedout = false;
-    request.setTimeout(this._timer, function() {
+    request.setTimeout(this._wait_time, function() {
       console.log("error: timeout");
       timedout = true;
     });
