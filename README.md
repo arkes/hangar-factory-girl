@@ -39,11 +39,11 @@ describe('My Page', function() {
 ```
 ## Options
 
-By default the waiting time used in http-sync is set to 1000. You can override it as:
+By default the waiting time used in http-sync is set to 2000. You can override it as:
 
 ```javascript
 var hangar = require('hangar-factory-girl');
-var factory = new hangar({ wait_time: 2000 });
+var factory = new hangar({ wait_time: 3000 });
 ```
 
 ## License
