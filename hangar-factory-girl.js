@@ -25,7 +25,7 @@ hangarFactoryGirl.prototype = {
   },
   build: function(name, attributes) {
     this._name   = name;
-    this._path   =  '/' + this.pluralizeName() + '/nesw';
+    this._path   =  '/' + this.pluralizeName() + '/new';
     this._method = 'GET';
 
     this.formatData(attributes);
