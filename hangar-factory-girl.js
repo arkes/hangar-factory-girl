@@ -5,7 +5,7 @@ var pluralize = require('pluralize');
 function hangarFactoryGirl(options) {
   this._options = options || {};
 
-  this._wait_time = this._options['wait_time'] || 2000;
+  this._wait_time = this._options['wait_time'] || 4000;
 
   var result = url.parse(this._options['url'] || browser.baseUrl);
   this._baseUrl  = result.href;
