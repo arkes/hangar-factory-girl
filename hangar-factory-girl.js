@@ -15,12 +15,13 @@ function hangarFactoryGirl(options) {
 }
 
 hangarFactoryGirl.prototype = {
-  create: function(name, attributes) {
+  create: function(name, attributes, include) {
     this._name   = name;
     this._path   =  '/' + this.pluralizeName();
     this._method = 'POST';
 
-    this.formatData(attributes);
+    this.formatData(attributes, include);
+
     return this.request();
   },
   build: function(name, attributes) {
@@ -40,11 +41,15 @@ hangarFactoryGirl.prototype = {
   pluralizeName: function() {
     return pluralize(this._name);
   },
-  formatData: function(attributes) {
+  formatData: function(attributes, include) {
     this._data = {};
 
     if (attributes !== undefined) {
       this._data[this._name] = attributes;
+    }
+
+    if (include !== undefined) {
+      this._data["include"] = include;
     }
   },
   request: function() {
