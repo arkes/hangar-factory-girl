@@ -2,8 +2,8 @@
 
 Library to use Hangar with Protractor
 
-This is only usefull with [Hangar](https://github.com/faradayio/hangar).
-More info about hangar: http://faraday.io/2014/09/24/hangar-using-factorygirl-factories-from-your-frontend-tests
+This is only useful with [Hangar](https://github.com/faradayio/hangar).
+Read more about hanger [here](hangar: http://www.faraday.io/blog/hangar-use-your-factorygirl-factories-for-your-front-end-tests).
 
 ## Installation
 
@@ -29,7 +29,19 @@ describe('My Page', function() {
   });
 
   it("does something", function() {
+    /* 
+    *  method create
+    *  1st param is factory's name
+    *  2nd param is factory's attributes that you want to override
+    *  3rd param is include option when you want model to return it's association
+    */
     var user = factory.create('user');
+
+    /* 
+    *  method build
+    *  1st param is factory's name
+    *  2nd param is factory's attributes that you want to override
+    */
     var comment = factory.build('comment', { user_id: user.id });
 
     browser.get('/accounts/' + user.id);
